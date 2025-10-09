@@ -1,0 +1,103 @@
+run:
+  tag: scfd_default
+  steps: 50000
+  seed: 1729
+  outdir: null
+grid:
+  shape:
+  - 128
+  - 128
+  spacing: 1.0
+physics:
+  beta: 1.0
+  gamma: 0.12
+  alpha: 0.1
+  coherence_p: 2
+  epsilon: 1.2
+  potential:
+    kind: quadratic
+    params:
+      center: 0.0
+      stiffness: 0.05
+  cross_gradient:
+    enabled: false
+    gamma: 0.35
+    epsilon: 1.2
+  curvature_penalty:
+    enabled: false
+    delta: 0.001
+  heterogeneity:
+    amplitude: 0.05
+    correlation_length: 9
+    seed: 31415
+integration:
+  dt: 0.0005
+  cfl_limit: 0.4
+  nudges:
+    enable_controller: false
+    max_step: 0.1
+  noise:
+    enabled: false
+    sigma_scale: 0.0
+    seed: 27182
+scheduler:
+  mode: poisson
+  poisson_rate: 1.0
+  jitter: 0.05
+  reseed_every: 10000
+free_energy_gate:
+  enabled: false
+  temperature:
+    min: 0.4
+    max: 1.2
+    ema_tau: 250.0
+  metropolis:
+    clip:
+    - 0.01
+    - 0.99
+    logit_scale: 1.0
+symbolizer:
+  bandpass:
+    low_cut: 0.05
+    high_cut: 0.35
+  threshold: 0.6
+  cluster_min_area: 9
+  history_window: 128
+observation:
+  trackers:
+    spectrum_window: 1024
+    horizon_twins: 4
+  autoencoder:
+    latent_dim: 8
+    hidden_channels:
+    - 16
+    - 32
+    recon_ema_tau: 200.0
+  controller:
+    ema_tau: 100.0
+    output_clamp: 0.1
+    surprise_threshold: 2.0
+logging:
+  interval: 10
+  spectra_interval: 100
+  impulse_interval: 2000
+em_baseline:
+  grid_shape:
+  - 64
+  - 64
+  steps: 256
+  kernel_radius: 5
+  kernel_sigma: 1.5
+  activation: tanh
+  halting:
+    threshold: 0.9
+    max_steps: 512
+    stochastic_p: 0.01
+  optimizer:
+    population: 32
+    elite: 4
+    mutation_scale: 0.05
+    generations: 50
+
+
+

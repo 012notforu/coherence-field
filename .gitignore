@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments  
+.env
+.venv
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files that might be generated during runs
+*.npz
+*.npy
+*.h5
+*.hdf5
+
+# Keep core system, only ignore temporary outputs
+logs/
+*.log
+temp/
+*.tmp

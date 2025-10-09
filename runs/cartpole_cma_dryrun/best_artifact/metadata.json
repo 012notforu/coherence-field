@@ -1,0 +1,22 @@
+{
+  "training": {
+    "episodes": 2,
+    "steps": 2000,
+    "generations": 5,
+    "population": 8,
+    "elite": 2,
+    "sigma_start": 0.3,
+    "sigma_decay": 1.0,
+    "seed": 7,
+    "evaluation_seeds": [
+      4058335882,
+      2684764584
+    ]
+  },
+  "visualization": {
+    "frames": 194,
+    "raster": "runs\\cartpole_cma_dryrun\\best_artifact\\scfd_field_raster.png",
+    "rollout": "runs\\cartpole_cma_dryrun\\best_artifact\\scfd_rollout.npz",
+    "video": null
+  }
+}
