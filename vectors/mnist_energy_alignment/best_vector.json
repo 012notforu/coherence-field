@@ -1,0 +1,27 @@
+{
+  "vector": [
+    0.8363998189480817,
+    0.5818354530736598,
+    -0.3417316765098516
+  ],
+  "metrics": {
+    "best_vector": [
+      0.8363998189480817,
+      0.5818354530736598,
+      -0.3417316765098516
+    ],
+    "best_fitness": 0.005719329893565489,
+    "iterations": 12,
+    "evaluations": 144,
+    "sigma": 0.5,
+    "sample_size": 256
+  },
+  "physics_domain": "nn_interpretability",
+  "objective": "mnist_energy_alignment",
+  "activation_layer": "conv2",
+  "tags": [
+    "mnist",
+    "energy_alignment",
+    "interpretability"
+  ]
+}

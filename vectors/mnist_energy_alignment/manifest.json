@@ -1,0 +1,68 @@
+{
+  "manifest_version": "1.0",
+  "vector_id": "mnist_energy_alignment",
+  "description": "CMA-evolved MNIST \u21e2 SCFD energy alignment parameters.",
+  "element_count": 3,
+  "element_roles": [
+    "mass_scale",
+    "accel_scale",
+    "c_const"
+  ],
+  "element_ranges": [
+    [
+      0.01,
+      10.0
+    ],
+    [
+      0.01,
+      10.0
+    ],
+    [
+      0.01,
+      1.0
+    ]
+  ],
+  "element_units": [
+    "scale",
+    "scale",
+    "scale"
+  ],
+  "element_dtypes": [
+    "float_linear",
+    "float_linear",
+    "float_linear"
+  ],
+  "param_mappings": {
+    "0": "mass_scale",
+    "1": "accel_scale",
+    "2": "c_const"
+  },
+  "domain_tags": [
+    "nn_interpretability",
+    "grid"
+  ],
+  "selection_predicate": "task in ['nn_interpretability', 'grid_nav']",
+  "priority": 1.2,
+  "invariants": [
+    "mass_scale>0",
+    "accel_scale>0",
+    "c_const>0"
+  ],
+  "coverage_requirement": 0.0,
+  "trust_region": {
+    "mass_scale": [
+      0.05,
+      8.0
+    ],
+    "accel_scale": [
+      0.05,
+      8.0
+    ],
+    "c_const": [
+      0.02,
+      0.5
+    ]
+  },
+  "cooldown_steps": 4,
+  "success_history_window": 50
+}
