@@ -1,4 +1,6 @@
-﻿"""SCFD-driven cart-pole controller."""
+﻿# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2025 012loop / Looptronics
+"""SCFD-driven cart-pole controller."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field

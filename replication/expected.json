@@ -1,0 +1,28 @@
+{
+  "EM baseline": {
+    "controller": "EM baseline",
+    "mean_steps": 128.67,
+    "std_steps": 17.91,
+    "min_steps": 104.0,
+    "max_steps": 146.0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "mean_alive": 32.0
+  },
+  "SCFD controller": {
+    "controller": "SCFD controller",
+    "mean_steps": 70.0,
+    "std_steps": 15.3,
+    "min_steps": 55.0,
+    "max_steps": 91.0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "mean_rms_step": 0.0
+  }
+}

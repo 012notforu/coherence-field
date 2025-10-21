@@ -1,4 +1,6 @@
-﻿"""Balanced ternary logic helpers for SCFD controllers."""
+﻿# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2025 012loop / Looptronics
+"""Balanced ternary logic helpers for SCFD controllers."""
 
 from __future__ import annotations
 
